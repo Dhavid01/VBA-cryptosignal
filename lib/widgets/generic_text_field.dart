@@ -74,6 +74,7 @@ class _GenericTextFieldState extends State<GenericTextField> {
                 ],
               )
             : const SizedBox(),
+        Gap.s8,
         Container(
           width: double.infinity,
           clipBehavior: Clip.hardEdge,
