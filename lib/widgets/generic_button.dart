@@ -33,7 +33,7 @@ class GenericButton extends StatelessWidget {
         color: transparent
             ? Theme.of(context).scaffoldBackgroundColor
             : enabled
-                ? color ?? AppColors.gold
+                ? color ?? GenericColors.gold
                 : Colors.grey.shade600,
       ),
       child: TextButton(

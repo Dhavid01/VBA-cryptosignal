@@ -1,3 +1,3 @@
 class NavigatorRoutes {
-  static const String home = "/home";
+  static const String login = "/login_view";
 }

@@ -101,7 +101,7 @@ class _GenericTextFieldState extends State<GenericTextField> {
                       icon: Icon(
                           obscure ? Icons.visibility_off : Icons.visibility),
                       onPressed: toggleVisibility,
-                      color: AppColors.gold,
+                      color: GenericColors.gold,
                     )
                   : null,
               isDense: true,
@@ -111,7 +111,7 @@ class _GenericTextFieldState extends State<GenericTextField> {
                   widget.fillColor ?? const Color(0xff0E2033).withOpacity(0.7),
               hintText: widget.hint,
               hintStyle:
-                  GenericTextStyle.hintText.copyWith(color: AppColors.grey),
+                  GenericTextStyle.hintText.copyWith(color: GenericColors.grey),
               filled: true,
               enabledBorder: const OutlineInputBorder(
                 borderSide: BorderSide(

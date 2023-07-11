@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vba_crypto_signal/core/constants/routing_constants.dart';
 import 'package:vba_crypto_signal/main.dart';
+import 'package:vba_crypto_signal/views/auth/login/login_view.dart';
 class AppRouter {
   static PageRoute _getPageRoute({
     required RouteSettings settings,
@@ -17,10 +18,10 @@ class AppRouter {
         : {};
 
     switch (settings.name) {
-      case NavigatorRoutes.home:
+      case NavigatorRoutes.login:
         return _getPageRoute(
           settings: settings,
-          viewToShow: const MyHomePage(title: '',),
+          viewToShow: const LoginView(),
         );
   
 
