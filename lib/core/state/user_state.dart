@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:vba_crypto_signal/core/data/local/local_cache.dart';
 import 'package:vba_crypto_signal/core/state/base_state.dart';
+
 class UserState extends BaseState {
   // final ProfileService _profileService;
   // final UserService _userService;
