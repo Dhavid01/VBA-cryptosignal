@@ -48,22 +48,28 @@ class _HomeViewState extends State<HomeView> {
                       SliverPinnedHeader(
                         child: Container(
                           color: GenericColors.scaffoldBackgroundColor,
-                          child: Row(
+                          child: Column(
                             children: [
-                              Image.asset(PngAssets.man),
-                              Gap.s10,
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                              Row(
                                 children: [
-                                  GenericText.montheading1("Hey, Jacobs"),
-                                  GenericText.montheading3(
-                                    "Welcome back",
-                                    color: GenericColors.grey,
+                                  Image.asset(PngAssets.man),
+                                  Gap.s10,
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      GenericText.montheading1("Hey, Jacobs"),
+                                      GenericText.montheading3(
+                                        "Welcome back",
+                                        color: GenericColors.grey,
+                                      ),
+                                    ],
                                   ),
+                                  const Spacer(),
+                                  SvgPicture.asset(SvgAssets.bell)
                                 ],
                               ),
-                              const Spacer(),
-                              SvgPicture.asset(SvgAssets.bell)
+                              Gap.s10
                             ],
                           ),
                         ),
@@ -129,4 +135,3 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 }
-  

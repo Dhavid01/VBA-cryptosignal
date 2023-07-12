@@ -9,6 +9,9 @@ class SvgAssets {
   static const String eth = "assets/svgs/eth.svg";
   static const String whiteBinance = "assets/svgs/white_bnb.svg";
   static const String arrowDown = "assets/svgs/arrow_down.svg";
+  static const String activity = "assets/svgs/activity.svg";
+  static const String setting = "assets/svgs/setting.svg";
+  static const String home = "assets/svgs/home.svg";
 }
 
 class PngAssets {

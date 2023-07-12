@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vba_crypto_signal/core/constants/routing_constants.dart';
 import 'package:vba_crypto_signal/views/auth/login/login_view.dart';
+import 'package:vba_crypto_signal/views/home.dart';
 import 'package:vba_crypto_signal/views/home_view/home_view.dart';
 
 class AppRouter {
@@ -27,7 +28,7 @@ class AppRouter {
       case NavigatorRoutes.home:
         return _getPageRoute(
           settings: settings,
-          viewToShow: const HomeView(),
+          viewToShow: const Home(),
         );
 
       default:
