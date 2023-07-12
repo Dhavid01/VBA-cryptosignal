@@ -31,6 +31,7 @@ class Gap extends StatelessWidget {
   static Gap get s28 => const Gap.both(28);
   static Gap get s30 => const Gap.both(30);
   static Gap get s32 => const Gap.both(32);
+  static Gap get s36 => const Gap.both(36);
 
   @override
   Widget build(BuildContext context) {
