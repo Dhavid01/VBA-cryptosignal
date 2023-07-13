@@ -26,11 +26,11 @@ class _HomeViewState extends State<HomeView> {
   ];
   List<String> coinNameList = ["BTCUSDT", "ETHUSDT", "BNBUSDT"];
   List<String> coinPercentageList = ["36.77 %", "24.77 %", "36.07 %"];
-  List<Color> colorList = [Colors.white, Color(0xffB1BCFF), Color(0xffF3BA2F)];
+  List<Color> colorList = [Colors.white, const Color(0xffB1BCFF), const Color(0xffF3BA2F)];
 
   int prevSelectedIndex = 0;
   var selectedIndex = 0;
-  // late ScrollController _scrollController;
+  ScrollController horizontalController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -74,22 +74,36 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
                       ),
-                      SliverToBoxAdapter(child: AmountCard()),
+                      const SliverToBoxAdapter(child: AmountCard()),
                       SliverToBoxAdapter(
-                        child: SingleChildScrollView(
-                          // controller: _scrollController,
-                          scrollDirection: Axis.horizontal,
-                          child: Row(
-                            children: [
-                              ...List.generate(
-                                  coinImageList.length,
-                                  (index) => CoinCard(
-                                        picture: coinImageList[index],
-                                        name: coinNameList[index],
-                                        percentage: coinPercentageList[index],
-                                        color: colorList[index],
-                                      ))
-                            ],
+                        child: RawScrollbar(
+                          controller: horizontalController,
+                          trackColor: const Color(0xff213345),
+                          thumbColor: Colors.white,
+                          thickness: 2,
+                          thumbVisibility: true,
+                          trackVisibility: true,
+                          child: SingleChildScrollView(
+                            controller: horizontalController,
+                            scrollDirection: Axis.horizontal,
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                bottom: 14,
+                              ),
+                              child: Row(
+                                children: [
+                                  ...List.generate(
+                                      coinImageList.length,
+                                      (index) => CoinCard(
+                                            picture: coinImageList[index],
+                                            name: coinNameList[index],
+                                            percentage:
+                                                coinPercentageList[index],
+                                            color: colorList[index],
+                                          ))
+                                ],
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -97,7 +111,7 @@ class _HomeViewState extends State<HomeView> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Gap.s36,
+                            Gap.s20,
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -123,6 +137,8 @@ class _HomeViewState extends State<HomeView> {
                             const HomeCard(status: "Active", colour: true),
                             const HomeCard(status: "Inactive", colour: false),
                             const HomeCard(status: "Active", colour: true),
+                            Gap.s36,
+                            Gap.s36
                           ],
                         ),
                       ),

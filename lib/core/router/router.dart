@@ -28,7 +28,7 @@ class AppRouter {
       case NavigatorRoutes.home:
         return _getPageRoute(
           settings: settings,
-          viewToShow: const Home(),
+          viewToShow: const MyHomePage(),
         );
 
       default:
