@@ -153,6 +153,7 @@ class _LoginViewState extends State<LoginView> {
                             "Dont have an account?",
                             color: GenericColors.grey,
                           ),
+                          Gap.s2,
                           GenericText.nunito1(
                             "Sign up",
                             color: GenericColors.gold,
