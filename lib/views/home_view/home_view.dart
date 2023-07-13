@@ -94,7 +94,7 @@ class _HomeViewState extends State<HomeView> {
                       SliverToBoxAdapter(
                         child: RawScrollbar(
                           controller: horizontalController,
-                          trackColor: const Color(0xff213345),
+                          trackColor: GenericColors.scaffoldSecondary,
                           thumbColor: Colors.white,
                           thickness: 2,
                           thumbVisibility: true,
