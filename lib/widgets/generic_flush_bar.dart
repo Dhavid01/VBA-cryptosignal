@@ -16,7 +16,7 @@ class GenericFlushBar {
       duration: duration ?? const Duration(seconds: 5),
       borderRadius: BorderRadius.circular(15),
       backgroundGradient: LinearGradient(colors: [
-        Colors.red,
+        const Color.fromARGB(255, 128, 8, 0),
         GenericColors.gold,
       ]),
       message: failure.message,
