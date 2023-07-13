@@ -18,7 +18,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
           var response = await authService.login(
               email: event.email, password: event.password);
 
-          emit(LoginSuccessful(message: response.data!.token));
+          emit(LoginSuccessful(message: response["message"]));
         } on Failure catch (failure) {
           emit(LoginError(failure: failure));
         }

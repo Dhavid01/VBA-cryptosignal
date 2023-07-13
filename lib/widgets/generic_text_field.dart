@@ -78,7 +78,9 @@ class _GenericTextFieldState extends State<GenericTextField> {
         Container(
           width: double.infinity,
           clipBehavior: Clip.hardEdge,
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
+          decoration: BoxDecoration(
+              // borderRadius: BorderRadius.circular(50),
+              ),
           child: TextFormField(
             maxLength: widget.maxLength,
             maxLines: widget.maxLines ?? 1,
@@ -89,7 +91,7 @@ class _GenericTextFieldState extends State<GenericTextField> {
             onFieldSubmitted: widget.onSubmitted,
             validator: (value) {
               if (value != null && value.isEmpty) {
-                return "cannot be empty";
+                return "Please fill in the required space";
               }
               if (widget.validator != null) return widget.validator!(value!);
               return null;
@@ -114,13 +116,23 @@ class _GenericTextFieldState extends State<GenericTextField> {
               hintStyle:
                   GenericTextStyle.hintText.copyWith(color: GenericColors.grey),
               filled: true,
-              enabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide(
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(50),
+                borderSide: const BorderSide(
                   color: Colors.transparent,
                 ),
               ),
-              focusedBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.transparent),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(50),
+                borderSide: const BorderSide(color: Colors.transparent),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(50),
+                borderSide: const BorderSide(color: Colors.redAccent),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(50),
+                borderSide: const BorderSide(color: Colors.redAccent),
               ),
             ),
             onChanged: widget.onChanged,

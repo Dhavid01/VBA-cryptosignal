@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:vba_crypto_signal/core/services/navigation_service.dart';
 import 'package:vba_crypto_signal/core/utils/colors.dart';
@@ -15,8 +17,12 @@ class GenericFlushBar {
       flushbarPosition: FlushbarPosition.BOTTOM,
       duration: duration ?? const Duration(seconds: 5),
       borderRadius: BorderRadius.circular(15),
+      backgroundGradient: LinearGradient(colors: [
+        Colors.red,
+        GenericColors.gold,
+      ]),
       message: failure.message,
-      margin: const EdgeInsets.all(3),
+      margin: const EdgeInsets.all(5),
       title: title ? failure.title : null,
       backgroundColor: color ?? GenericColors.gold,
     ).show(NavigationService.instance.navigatorKey.currentContext!);

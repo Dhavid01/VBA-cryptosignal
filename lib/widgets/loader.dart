@@ -27,13 +27,12 @@ class Loader extends StatelessWidget {
               ? Container(
                   height: height ?? double.infinity,
                   width: double.infinity,
-                  color: Colors.black.withOpacity(0.75),
+                  color: Colors.black.withOpacity(0.65),
                   child: const Center(child: CircularProgressIndicator()),
-                 
                 )
               : const SizedBox()
         ],
-     ),
-);
-}
+      ),
+    );
+  }
 }

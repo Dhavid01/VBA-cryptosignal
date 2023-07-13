@@ -29,9 +29,9 @@ class NetworkClient {
   static Dio createDio() {
     var dio = Dio(BaseOptions(
       baseUrl: ApiRoute.baseUrl,
-      receiveTimeout: const Duration(milliseconds: 40000), // 15 seconds
-      connectTimeout: const Duration(milliseconds: 40000),
-      sendTimeout: const Duration(milliseconds: 40000),
+      receiveTimeout: const Duration(milliseconds: 15000), // 15 seconds
+      connectTimeout: const Duration(milliseconds: 15000),
+      sendTimeout: const Duration(milliseconds: 15000),
     ));
 
     dio.interceptors.addAll({
@@ -90,7 +90,6 @@ class NetworkClient {
   Future<dynamic> post(
     /// the api route without the base url
     String uri, {
-
     ///this are query parameters that would
     /// be attached to the url
     /// [e.g]=>{"a":"yes"}
@@ -128,7 +127,6 @@ class NetworkClient {
   Future<T> put<T>(
     /// the api route without the base url
     String uri, {
-
     ///this are query parameters that would
     /// be attached to the url
     /// [e.g]=>{"a":"yes"}
@@ -160,7 +158,6 @@ class NetworkClient {
   Future<T> patch<T>(
     /// the api route without the base url
     String uri, {
-
     ///this are query parameters that would
     /// be attached to the url
     /// [e.g]=>{"a":"yes"}
@@ -226,7 +223,6 @@ class NetworkClient {
 
   Future<dynamic> sendFormData(
     FormDataType requestType, {
-
     /// route path without baseurl
     required String uri,
 

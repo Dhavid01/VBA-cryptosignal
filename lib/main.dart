@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vba_crypto_signal/bloc/login_bloc.dart';
 import 'package:vba_crypto_signal/core/router/router.dart';
 import 'package:vba_crypto_signal/core/services/navigation_service.dart';
+import 'package:vba_crypto_signal/core/utils/colors.dart';
 import 'package:vba_crypto_signal/core/utils/locator.dart';
 import 'package:vba_crypto_signal/views/auth/login/login_view.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Vba Crypto Signal',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: GenericColors.gold,
         ),
         onGenerateRoute: AppRouter.generateRoute,
         navigatorKey: NavigationService.instance.navigatorKey,
