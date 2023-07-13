@@ -1,4 +1,3 @@
-import 'package:intl/intl.dart';
 import 'package:vba_crypto_signal/core/extensions/string_extension.dart';
 
 class Validator {

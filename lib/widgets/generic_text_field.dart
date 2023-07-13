@@ -78,9 +78,7 @@ class _GenericTextFieldState extends State<GenericTextField> {
         Container(
           width: double.infinity,
           clipBehavior: Clip.hardEdge,
-          decoration: BoxDecoration(
-              // borderRadius: BorderRadius.circular(50),
-              ),
+          decoration: const BoxDecoration(),
           child: TextFormField(
             maxLength: widget.maxLength,
             maxLines: widget.maxLines ?? 1,

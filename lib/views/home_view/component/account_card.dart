@@ -45,7 +45,7 @@ class AmountCard extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 45,
               ),
               GenericText.montheading4("Account Balance"),
