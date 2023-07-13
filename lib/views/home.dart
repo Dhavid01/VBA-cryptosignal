@@ -77,6 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return PersistentTabView(
       context,
       controller: _controller,
+      navBarHeight: 85,
       bottomScreenMargin: 0,
       screens: _buildScreens(),
       items: _navBarsItems(),

@@ -22,11 +22,27 @@ class _HomeViewState extends State<HomeView> {
   List<String> coinImageList = [
     SvgAssets.bitcoin,
     SvgAssets.eth,
-    SvgAssets.bnb
+    SvgAssets.bnb,
+    SvgAssets.bitcoin,
   ];
-  List<String> coinNameList = ["BTCUSDT", "ETHUSDT", "BNBUSDT"];
-  List<String> coinPercentageList = ["36.77 %", "24.77 %", "36.07 %"];
-  List<Color> colorList = [Colors.white, const Color(0xffB1BCFF), const Color(0xffF3BA2F)];
+  List<String> coinNameList = [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "BTCUSDT",
+  ];
+  List<String> coinPercentageList = [
+    "36.77 %",
+    "24.77 %",
+    "36.07 %",
+    "36.77 %",
+  ];
+  List<Color> colorList = [
+    Colors.white,
+    const Color(0xffB1BCFF),
+    const Color(0xffF3BA2F),
+    Colors.white,
+  ];
 
   int prevSelectedIndex = 0;
   var selectedIndex = 0;
